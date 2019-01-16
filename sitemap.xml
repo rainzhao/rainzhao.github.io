@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/01/16/Java%E4%B8%ADComparator%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2019-01-16T06:04:23.998Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/01/16/%E4%BD%BF%E7%94%A8fastjson%E5%B0%86json%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E4%B8%BAMap/</loc>
     
     <lastmod>2019-01-16T05:56:11.044Z</lastmod>
