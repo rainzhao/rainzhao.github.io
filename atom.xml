@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-16T03:07:14.339Z</updated>
+  <updated>2019-01-16T05:45:35.188Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My New Post</title>
+    <title>Java中将list转换为array</title>
     <link href="http://yoursite.com/2019/01/16/My-New-Post/"/>
     <id>http://yoursite.com/2019/01/16/My-New-Post/</id>
     <published>2019-01-16T02:58:50.000Z</published>
-    <updated>2019-01-16T03:07:14.339Z</updated>
+    <updated>2019-01-16T05:45:35.188Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="1-List-toArray"><a href="#1-List-toArray" class="headerlink" title="1. List.toArray()"></a>1. List.toArray()</h1><blockquote><p>java8中的hotspot会自己计算数组大小，不必指定数组的大小。<br>例如：<code>String[] array = list.toArray(new String[0]);</code><br>而不必写为：<code>String[] array = list.toArray(new String[list.size()]);</code></p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"aaa"</span>, <span class="string">"bbb"</span>, <span class="string">"ccc"</span>);</span><br><span class="line">String[] array = list.toArray(<span class="keyword">new</span> String[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure><h1 id="2-List-stream"><a href="#2-List-stream" class="headerlink" title="2. List.stream()"></a>2. List.stream()</h1><blockquote><p>java8 可以采用如下写法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"aaa"</span>, <span class="string">"bbb"</span>, <span class="string">"ccc"</span>);</span><br><span class="line">String[] array = list.stream().toArray(String[]::<span class="keyword">new</span>);</span><br></pre></td></tr></table></figure></p></blockquote><h1 id="3-google-guava-库"><a href="#3-google-guava-库" class="headerlink" title="3. google guava 库"></a>3. google guava 库</h1><blockquote><p>建议使用java api 而不是下面此种方法</p></blockquote><p>##3.1 使用FluentIterable类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"aaa"</span>, <span class="string">"bbb"</span>, <span class="string">"ccc"</span>);</span><br><span class="line">String[] array = FluentIterable.from(list).toArray(String.class);</span><br></pre></td></tr></table></figure></p><p>##3.2 使用Iterables类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"aaa"</span>, <span class="string">"bbb"</span>, <span class="string">"ccc"</span>);</span><br><span class="line">String[] array = Iterables.toArray(list, String.class);</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;spa
+        &lt;h1 id=&quot;1-List-toArray&quot;&gt;&lt;a href=&quot;#1-List-toArray&quot; class=&quot;headerlink&quot; title=&quot;1. List.toArray()&quot;&gt;&lt;/a&gt;1. List.toArray()&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;jav
       
     
     </summary>
