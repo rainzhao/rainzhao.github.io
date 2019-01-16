@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-16T06:04:23.998Z</updated>
+  <updated>2019-01-16T06:20:22.509Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java性能调优</title>
+    <link href="http://yoursite.com/2019/01/16/java%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/"/>
+    <id>http://yoursite.com/2019/01/16/java性能调优/</id>
+    <published>2019-01-16T06:16:55.000Z</published>
+    <updated>2019-01-16T06:20:22.509Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="jvm参数"><a href="#jvm参数" class="headerlink" title="jvm参数"></a>jvm参数</h3><p>-Xms等价于-XX:InitialHeapSize<br>-Xmx等价于-XX:MaxHeapSize<br>-XX:MetaspaceSize=32M -XX:MaxMetaspaceSize=32M</p><p>查看JVM运行时参数：<br>jps: 查看java进程<br>jps -l: 查看完全类名</p><p>jinfo -flag MaxHeapSize pid(java进程pid)  : java进程设置的最大内存<br>jinfo -flags pid  : 查看手动赋值过的参数</p><h3 id="jstat"><a href="#jstat" class="headerlink" title="jstat:"></a>jstat:</h3><p>jstat -class 9259r<br>Loaded  Bytes  Unloaded  Bytes     Time<br> 17141   31432.3       32    48.6      24.84<br>loaded 加载的类的个数<br>unloaded 卸载的</p><h3 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h3><blockquote><p>gc 、-gcutil、-gccause、-gcnew、-gcold</p></blockquote><p>jstat -gc pid 1000 3 : </p><p>jstat -gc pid 1000 3<br> S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT<br>7552.0 7552.0  0.0   3140.8 60416.0   5824.5   150948.0   108001.5  89600.0 86713.5 11776.0 11173.3    519    3.519   7      1.107    4.626</p><p>S0C、S1C、S0U、S1U、：S0和S1的总量与使用量。<br>EC、EU：Eden区总量与使用量。<br>OC、OU：Old区总量与使用量。<br>MC、MU：MetaSpace区总量与使用量。<br>CCSC、CCSU：压缩类空间总量与使用量。<br>YGC、YGCT: YoungGC的次数与时间。<br>FGC、FGCT: FullGC的次数与时间。<br>GCT：总的GC时间</p><h2 id="JIT编译"><a href="#JIT编译" class="headerlink" title="JIT编译"></a>JIT编译</h2><p>jstat -compiler pid</p><h2 id="导出内存映像文件"><a href="#导出内存映像文件" class="headerlink" title="导出内存映像文件"></a>导出内存映像文件</h2><p>内存溢出自动导出：<br>-XX:+HeapDumpOnOutOfMemoryError<br>-XX:HeapDumpPath=./<br>使用jmap命令手动导出：<br>jmap -dump:format=b,file=heap.hprof pid</p><h2 id="jstack死循环与死锁"><a href="#jstack死循环与死锁" class="headerlink" title="jstack死循环与死锁"></a>jstack死循环与死锁</h2><p>线程的几种状态：<br>NEW： 线程还未启动<br>RUNNABLE ：线程已经运行。<br>BLOCKED：等待锁<br>WAITING: 等待另一个线程做一些操作。<br>TIMED_WAITING:<br>TERMINATED: 线程已经退出</p><h2 id="死循环导致CPU飙高"><a href="#死循环导致CPU飙高" class="headerlink" title="死循环导致CPU飙高"></a>死循环导致CPU飙高</h2><p>mvn clean package -Dmaven.test.skip<br>jstak pid &gt; text.txt<br>top<br>top -p pid -H<br>printf  “%x” pid 转换为16进制 根据此16进制的值，去堆栈文件中去查询此值<br><img src="https://upload-images.jianshu.io/upload_images/5899859-a4e241b475ad9923.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;jvm参数&quot;&gt;&lt;a href=&quot;#jvm参数&quot; class=&quot;headerlink&quot; title=&quot;jvm参数&quot;&gt;&lt;/a&gt;jvm参数&lt;/h3&gt;&lt;p&gt;-Xms等价于-XX:InitialHeapSize&lt;br&gt;-Xmx等价于-XX:MaxHeapSize&lt;br&gt;-X
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Java中Comparator的使用</title>
