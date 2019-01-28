@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/01/28/java8-Function-how-to-use/</loc>
+    
+    <lastmod>2019-01-28T12:51:20.039Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/01/23/java%E5%8F%8D%E5%B0%84/</loc>
+    
+    <lastmod>2019-01-24T03:13:37.761Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/01/23/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/</loc>
+    
+    <lastmod>2019-01-23T09:47:47.585Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/01/19/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</loc>
     
-    <lastmod>2019-01-23T02:32:58.614Z</lastmod>
+    <lastmod>2019-01-23T02:37:28.801Z</lastmod>
     
   </url>
   
