@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/02/02/redis-%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2019-02-12T12:10:25.583Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/redis-%E5%AD%A6%E4%B9%A0/index.html</loc>
+    
+    <lastmod>2019-02-02T12:17:05.044Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/01/30/postgresql-%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2019-01-30T11:39:32.576Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/01/30/%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2019-01-30T03:23:03.545Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/01/28/java8-Function-how-to-use/</loc>
     
     <lastmod>2019-01-28T12:51:20.039Z</lastmod>
