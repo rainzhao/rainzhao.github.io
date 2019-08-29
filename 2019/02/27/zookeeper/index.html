@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> zookeeper · RainZhao</title><meta name="description" content="zookeeper - 赵宇"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/logo.png"><link rel="stylesheet" href="/css/apollo.css"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="RainZhao"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/rainzhao" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/rainzhao" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><aside id="article-toc" role="navigation" class="fixed"><div id="article-toc-inner"><strong class="sidebar-title">目录
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#zookeeper特性"><span class="toc-number">1.</span> <span class="toc-text">zookeeper特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zookeeper目录结构"><span class="toc-number">2.</span> <span class="toc-text">zookeeper目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zookeeper配置文件（zoo-cfg）"><span class="toc-number">3.</span> <span class="toc-text">zookeeper配置文件（zoo.cfg）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zookeeper启动"><span class="toc-number">4.</span> <span class="toc-text">zookeeper启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zookeeper基本数据模型"><span class="toc-number">5.</span> <span class="toc-text">zookeeper基本数据模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zookeeper数据模型基本操作"><span class="toc-number">6.</span> <span class="toc-text">zookeeper数据模型基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zk的作用"><span class="toc-number">7.</span> <span class="toc-text">zk的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zk常用的命令"><span class="toc-number">8.</span> <span class="toc-text">zk常用的命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zk特性-session的基本原理"><span class="toc-number">9.</span> <span class="toc-text">zk特性 - session的基本原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zk常用命令操作"><span class="toc-number">10.</span> <span class="toc-text">zk常用命令操作</span></a></li></ol></strong></div></aside><div class="lookeye"><span id="busuanzi_container_page_pv"></span>Viewd<span id="busuanzi_value_page_pv"> </span>times<img src="/eye.png"></div><article class="post-block"><h1 class="post-title">zookeeper</h1><div class="post-info">Feb 27, 2019</div><div class="post-content"><h2 id="zookeeper特性"><a href="#zookeeper特性" class="headerlink" title="zookeeper特性"></a>zookeeper特性</h2><p>一致性：数据一致性，数据按照顺序分批入库<br>原子性： 事务要么成功，要么失败，不会局部化。<br>单一视图：客户端连接集群中的任意zk节点，数据是一致的<br>可靠性：每次对zk的操作状态都是保存在服务端<br>实时性：客户端可以读取到zk服务端的最新数据</p>
+<h2 id="zookeeper目录结构"><a href="#zookeeper目录结构" class="headerlink" title="zookeeper目录结构"></a>zookeeper目录结构</h2><p>bin：主要的一些运行命令<br>conf: 存放配置文件，zk.cfg 等<br>contrib: 附加的一些功能<br>dist-maven: mvn编译后的目录<br>docs: 文档<br>lib: 依赖的jar包<br>recipes: 案例demo代码<br>src: 源码</p>
+<h2 id="zookeeper配置文件（zoo-cfg）"><a href="#zookeeper配置文件（zoo-cfg）" class="headerlink" title="zookeeper配置文件（zoo.cfg）"></a>zookeeper配置文件（zoo.cfg）</h2><p>tickTime: 用于计算的时间单元。比如session超时：N * tickTime<br>initLimit: 用于集群，允许从节点连接并同步到master节点的初始化连接时间，以tickTime的倍数来标识<br>syncLimit: 用于集群，master主节点与从节点之间发送消息，请求和应答时间长度（心跳机制）。<br>dataDir：必须配置（事务文件，）<br>dataLogDir: 日志目录,如果不配置会和dataDir公用<br>clientPort: 连接服务器端口，默认2181</p>
+<h2 id="zookeeper启动"><a href="#zookeeper启动" class="headerlink" title="zookeeper启动"></a>zookeeper启动</h2><p>Usage: ./zkServer.sh {start|start-foreground|stop|restart|status|upgrade|print-cmd}</p>
+<h2 id="zookeeper基本数据模型"><a href="#zookeeper基本数据模型" class="headerlink" title="zookeeper基本数据模型"></a>zookeeper基本数据模型</h2><p>树形结构。</p>
+<p>类似linux/unix的文件目录：/usr/local/..</p>
+<p>每一个节点都称之为znode，它可以有子节点，也可以有数据</p>
+<p>每个节点分为临时节点和永久节点，临时节点在客户端断开后消失</p>
+<p>每个zk节点都有各自的版本号，可以通过命令行来显示节点信息</p>
+<p>每当节点数据发生变化，那么该节点的版本号会累加（乐观锁）</p>
+<p>删除/修改过时的节点，版本号不匹配会报错</p>
+<p>每个zk节点的数据不宜过大，几k即可</p>
+<p>节点可以设置权限acl，可以通过权限来限制用户的访问</p>
+<h2 id="zookeeper数据模型基本操作"><a href="#zookeeper数据模型基本操作" class="headerlink" title="zookeeper数据模型基本操作"></a>zookeeper数据模型基本操作</h2><p>客户端连接</p>
+<ol>
+<li>启动zk 进入bin目录 ./zkServer.sh start</li>
+<li>连接zk 进入bin目录 ./zkCli.sh</li>
+<li>help 查看命令<br><code>[zk: localhost:2181(CONNECTED) 0] help</code></li>
+</ol>
+<h2 id="zk的作用"><a href="#zk的作用" class="headerlink" title="zk的作用"></a>zk的作用</h2><ol>
+<li>master节点选举，主节点挂了以后，从节点就会接收工作，并且保证这个节点是唯一的，这也是所谓的首脑模式，从而保证我们的集群是高可用的。</li>
+<li>统一配置文件管理，只需要部署一台服务器，则可以把相同的配置文件同步更新到其他所有服务器。</li>
+<li>发布与订阅，类似消息队列mq，dubbo发布者把数据存在znode上，订阅者会读取这个数据。</li>
+<li>提供分布式锁，分布式环境中不同进程之间争夺资源，类似于多线程中的锁。</li>
+<li>集群管理，集群中保证数据的强一致性。</li>
+</ol>
+<h2 id="zk常用的命令"><a href="#zk常用的命令" class="headerlink" title="zk常用的命令"></a>zk常用的命令</h2><ol>
+<li>打开客户端<br><code>./zkCli.sh</code></li>
+<li><p>ls 与 ls2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 2] ls /zookeeper      </span><br><span class="line">[quota]</span><br><span class="line">[zk: localhost:2181(CONNECTED) 3] ls2 </span><br><span class="line">[zk: localhost:2181(CONNECTED) 4] ls2 /</span><br><span class="line">[zookeeper]</span><br><span class="line">cZxid = 0x0 节点id</span><br><span class="line">ctime = Thu Jan 01 08:00:00 CST 1970 创建时间</span><br><span class="line">mZxid = 0x0 修改后分配的节点id</span><br><span class="line">mtime = Thu Jan 01 08:00:00 CST 1970 修改时间</span><br><span class="line">pZxid = 0x0 子节点id</span><br><span class="line">cversion = -1 子节点version</span><br><span class="line">dataVersion = 0 当前节点数据的版本号</span><br><span class="line">aclVersion = 0 权限version</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 0 数据长度</span><br><span class="line">numChildren = 1 子节点数量</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>get / 获取数据 ， stat 获取节点信息</p>
+</li>
+</ol>
+<h2 id="zk特性-session的基本原理"><a href="#zk特性-session的基本原理" class="headerlink" title="zk特性 - session的基本原理"></a>zk特性 - session的基本原理</h2><ol>
+<li>客户端与服务端之间的连接存在的会话</li>
+</ol>
+<p>每个会话都会设置一个超时时间</p>
+<p>心跳结束，session则过期</p>
+<ol start="2">
+<li><p>session 过期则临时节点znode会被抛弃</p>
+</li>
+</ol>
+<p>心跳机制： 客户端向服务端的ping包请求，</p>
+<h2 id="zk常用命令操作"><a href="#zk常用命令操作" class="headerlink" title="zk常用命令操作"></a>zk常用命令操作</h2></div></article></div></main><footer><div class="paginator"><a href="/2019/03/21/udp的单播和广播（组播）/" class="prev">PREV</a><a href="/2019/02/02/redis-学习/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
+var disqus_identifier = '2019/02/27/zookeeper/';
+var disqus_title = 'zookeeper';
+var disqus_url = 'http://yoursite.com/2019/02/27/zookeeper/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//seansun.disqus.com/count.js" async></script><div class="copyright"><p>© 2019 <a href="http://yoursite.com">赵宇</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
