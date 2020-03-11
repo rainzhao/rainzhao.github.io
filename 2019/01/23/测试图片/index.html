@@ -5,7 +5,7 @@
 </ol>
 <p>是一中<strong>可靠</strong>，<strong>一致</strong>的方式，访问和操作数据库中数据的程序单元。<br>原则：<br>原子性，一致性，隔离性，持久性。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span> <span class="keyword">TRANSACTION</span></span><br><span class="line"><span class="keyword">update</span> t_user <span class="keyword">set</span> amount = amount - <span class="number">100</span> <span class="keyword">where</span> username=<span class="string">'batman'</span></span><br><span class="line"><span class="keyword">update</span> t_user <span class="keyword">set</span> amount = amount + <span class="number">100</span> <span class="keyword">where</span> username=<span class="string">'superman'</span></span><br><span class="line"><span class="comment">-- roolback</span></span><br></pre></td></tr></table></figure>
-</div></article></div></main><footer><div class="paginator"><a href="/2019/01/23/java反射/" class="prev">上一篇</a><a href="/2019/01/19/java内存模型/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
+</div></article></div></main><footer><div class="paginator"><a href="/2019/01/23/java反射/" class="prev">PREV</a><a href="/2019/01/19/java内存模型/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
 var disqus_identifier = '2019/01/23/测试图片/';
 var disqus_title = '分布式事务';
 var disqus_url = 'http://yoursite.com/2019/01/23/测试图片/';
