@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/01/28/java8-Function-how-to-use/</loc>
+    
+    <lastmod>2020-03-11T13:17:31.411Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/03/11/lambda%E5%BA%94%E7%94%A8%E5%88%B0builder%E6%A8%A1%E5%BC%8F/</loc>
     
     <lastmod>2020-03-11T12:54:15.110Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>http://yoursite.com/2019/01/30/%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2019-01-30T03:23:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/01/28/java8-Function-how-to-use/</loc>
-    
-    <lastmod>2019-01-28T12:51:20.000Z</lastmod>
     
   </url>
   
