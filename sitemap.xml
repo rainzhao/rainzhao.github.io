@@ -2,121 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/03/11/lambda%E5%BA%94%E7%94%A8%E5%88%B0builder%E6%A8%A1%E5%BC%8F/</loc>
+    
+    <lastmod>2020-03-11T06:35:37.001Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/07/05/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91-avl/</loc>
     
-    <lastmod>2019-07-06T12:24:21.184Z</lastmod>
+    <lastmod>2019-07-06T12:24:21.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/03/21/udp%E7%9A%84%E5%8D%95%E6%92%AD%E5%92%8C%E5%B9%BF%E6%92%AD%EF%BC%88%E7%BB%84%E6%92%AD%EF%BC%89/</loc>
     
-    <lastmod>2019-03-21T09:05:50.708Z</lastmod>
+    <lastmod>2019-03-21T09:05:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/23/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/</loc>
     
-    <lastmod>2019-03-16T13:57:32.754Z</lastmod>
+    <lastmod>2019-03-16T13:57:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/02/02/redis-%E5%AD%A6%E4%B9%A0/</loc>
     
-    <lastmod>2019-03-01T14:02:53.839Z</lastmod>
+    <lastmod>2019-03-01T14:02:53.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/02/27/zookeeper/</loc>
     
-    <lastmod>2019-02-27T12:29:19.398Z</lastmod>
+    <lastmod>2019-02-27T12:29:19.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/redis-%E5%AD%A6%E4%B9%A0/index.html</loc>
     
-    <lastmod>2019-02-02T12:17:05.044Z</lastmod>
+    <lastmod>2019-02-02T12:17:05.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/30/postgresql-%E5%AD%A6%E4%B9%A0/</loc>
     
-    <lastmod>2019-01-30T11:39:32.576Z</lastmod>
+    <lastmod>2019-01-30T11:39:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/30/%E5%AD%A6%E4%B9%A0/</loc>
     
-    <lastmod>2019-01-30T03:23:03.545Z</lastmod>
+    <lastmod>2019-01-30T03:23:03.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/28/java8-Function-how-to-use/</loc>
     
-    <lastmod>2019-01-28T12:51:20.039Z</lastmod>
+    <lastmod>2019-01-28T12:51:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/23/java%E5%8F%8D%E5%B0%84/</loc>
     
-    <lastmod>2019-01-24T03:13:37.761Z</lastmod>
+    <lastmod>2019-01-24T03:13:37.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/19/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</loc>
     
-    <lastmod>2019-01-23T02:37:28.801Z</lastmod>
+    <lastmod>2019-01-23T02:37:28.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/19/sychronized%E5%AD%A6%E4%B9%A0/</loc>
     
-    <lastmod>2019-01-19T06:42:47.279Z</lastmod>
+    <lastmod>2019-01-19T06:42:47.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/16/java%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/</loc>
     
-    <lastmod>2019-01-16T06:20:22.509Z</lastmod>
+    <lastmod>2019-01-16T06:20:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/16/Java%E4%B8%ADComparator%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2019-01-16T06:04:23.998Z</lastmod>
+    <lastmod>2019-01-16T06:04:23.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/16/%E4%BD%BF%E7%94%A8fastjson%E5%B0%86json%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E4%B8%BAMap/</loc>
     
-    <lastmod>2019-01-16T05:56:11.044Z</lastmod>
+    <lastmod>2019-01-16T05:56:11.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/16/My-New-Post/</loc>
     
-    <lastmod>2019-01-16T05:45:35.188Z</lastmod>
+    <lastmod>2019-01-16T05:45:35.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2019/01/15/hello-world/</loc>
     
-    <lastmod>2019-01-15T12:13:13.533Z</lastmod>
+    <lastmod>2019-01-15T12:13:13.000Z</lastmod>
     
   </url>
   
