@@ -13,7 +13,7 @@
 <h2 id="导出内存映像文件"><a href="#导出内存映像文件" class="headerlink" title="导出内存映像文件"></a>导出内存映像文件</h2><p>内存溢出自动导出：<br>-XX:+HeapDumpOnOutOfMemoryError<br>-XX:HeapDumpPath=./<br>使用jmap命令手动导出：<br>jmap -dump:format=b,file=heap.hprof pid</p>
 <h2 id="jstack死循环与死锁"><a href="#jstack死循环与死锁" class="headerlink" title="jstack死循环与死锁"></a>jstack死循环与死锁</h2><p>线程的几种状态：<br>NEW： 线程还未启动<br>RUNNABLE ：线程已经运行。<br>BLOCKED：等待锁<br>WAITING: 等待另一个线程做一些操作。<br>TIMED_WAITING:<br>TERMINATED: 线程已经退出</p>
 <h2 id="死循环导致CPU飙高"><a href="#死循环导致CPU飙高" class="headerlink" title="死循环导致CPU飙高"></a>死循环导致CPU飙高</h2><p>mvn clean package -Dmaven.test.skip<br>jstak pid &gt; text.txt<br>top<br>top -p pid -H<br>printf  “%x” pid 转换为16进制 根据此16进制的值，去堆栈文件中去查询此值<br><img src="https://upload-images.jianshu.io/upload_images/5899859-a4e241b475ad9923.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-</div></article></div></main><footer><div class="paginator"><a href="/2019/01/19/sychronized学习/" class="prev">PREV</a><a href="/2019/01/16/Java中Comparator的使用/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
+</div></article></div></main><footer><div class="paginator"><a href="/2019/01/19/sychronized学习/" class="prev">上一篇</a><a href="/2019/01/16/Java中Comparator的使用/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
 var disqus_identifier = '2019/01/16/java性能调优/';
 var disqus_title = 'java性能调优';
 var disqus_url = 'http://yoursite.com/2019/01/16/java性能调优/';
